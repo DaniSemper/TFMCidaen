@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>XRAY COVID DETECTOR </title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images\mCIDaeNnb.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader-wrapper">            
+            <span class="loader">                
+                <span class="loader-inner"></span></span>
+        </div>
+    </div>
+
+    
+    
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header-top">
+            
+            
+            <div class="header">
+                
+                <div>                            
+                    <a href="/">
+                        <img class="logo" style="float: right;" src="images/mCIDaeNnb.png">
+                        <div class="blue-line"></div>
+                    </a>            
+                </div>
+                
+            </div>
+            <!-- end header inner -->
+
+            <!-- end header -->
+            <section class="slider_section">
+                <div class="banner_main">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-2 padding_left0">
+                                <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a href="#game">Detector</a> </li>
+                                            <li> <a href="#games">Estadísticas</a> </li>
+                                            <li> <a href="#software">Algoritmo</a> </li>
+                                            <li> <a href="#testimonial">Trabajo Futuro</a> </li>
+                                            <li> <a href="#about">Contacto</a> </li>
+                                                                                      
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">                             
+                                
+                                <div id='word-cloud'>
+                                    <div class='hidden'>
+                                        <div class="loader-wrapper">
+                                            <p style="color:white; position: inherit; margin-top: 7rem;" >Realizando análisis, espere...</p > 
+                                            <span class="loader">                
+                                                <span class="loader-inner"></span></span>
+                                        </div>
+                                    </div>                                    
+                                    <img img id="myImg" src="images/fondo.png" width="100%" height="100%"/>
+                                 </div>
+                               
+                            </div>
+                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 ">
+                                <div class="text-bg">
+                                    <h1>XRAY<br> COVID Detector</h1>
+                                    <span>Creado mediante tecnicas de Deep Learning</span>
+                                </div>
+                                    <div class="custom-file col-md-auto">
+                                        <input accept=".jpg,.jpeg" id="input-image" type="file" class="custom-file-input">
+                                        <label for="input-image" class="custom-file-label">Selecciona fichero...</label>
+                                    </div>
+                                   
+                                  
+                                        <button id="upload-image" href="#" class="buttonanalizar" disabled>Analizar</button>   
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <h2 style="color: white; ">
+                                            Resultados del análisis:
+                                            <br>
+                                            <br>
+                                            <div class="row" style="padding-left: 12px;">
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
+                                                    <ul>
+                                                        <li style="list-style-type: disc;" >COVID:  </li>
+                                                        <li style="list-style-type: disc;" >NORMAL: </li>
+                                                        <li style="list-style-type: disc;" >OTROS: </li>
+                                                     </ul>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
+                                                    <ul>
+                                                        <li id="covid"></li>
+                                                        <li  id="normal"> </li>
+                                                        <li  id='other'> </li>
+                                                     </ul>
+                                                </div>
+                                            </div>
+                                        </h2>
+                                    
+                                   
+                               
+                            </div>
+
+
+                        </div>
+                        
+                    </div>
+
+                    
+
+                </div>
+               
+           </section>
+
+          
+        
+        </div>
+
+        
+    </header>
+
+    <!-- our -->
+    <div id="games" class="our">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2 style="text-align: center;">Estadísticas</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 margin_bottom">
+                    <div class="row">
+
+                        <div class="col-xl-5 col-lg-5 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="images/ACCURACY.PNG" alt="#" /></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>Precision/recall/F1</h3>
+                                <p>El algoritmo realiza una clasificación en 3 clases, con una media de precision del 95%</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 margin_bottom">
+                    <div class="row">
+
+                        <div class="col-xl-5 col-lg-5 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="images/estadisticas2.PNG" alt="#" /></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <br>
+                                <br>
+                                <h3>Matriz de confusión</h3>
+                                <p>Utilizando una base de datos con mas de 10.000 radiografías, el algorimo es capaz de predecir la mayoría de los casos de forma correcta. </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-12">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="images/our-image3.jpg" alt="#" /></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>Cricket</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+   
+    <!-- end our -->
+    <!-- We are -->
+    <div id="software" class="We_are">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Algoritmo</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <div class="box_bg">
+                         <div class="box_bg_img">
+                             
+                             <figure><img src="images\CNNARCHITECTURE.png"></figure>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 border_left">
+                     
+                     <div class="box_text">
+                         <p style="text-align: left;">Utilizando técnicas de Transfer Learning, tomamos como modelo base la red neuronal pre-entrenada de MobileNet, una arquitectura propuesta por Google diseñada para trabajar en entornos con poca capacidad computacional.
+                            </p>   
+                            <p></p>
+                            <br>
+                            
+                            <p style="text-align: left;"> La arquitectura original MobileNet :</p>                  
+                            <br>
+                           
+                         
+                     </div>
+                     <img src="https://static-01.hindawi.com/articles/misy/volume-2020/7602384/figures/7602384.fig.001.svgz"></img>
+                     <br>
+                     <br>
+                     <br>
+                     <p style="text-align: left;"> Utilizaremos esta arquitectura entrenada con ImageNet junto con algunas capas custom creadas para el proceso. Entre estas capas (que pueden ser observadas en la imagen a la izquierda) cabe destacar el uso del dropout para disminuir el sobreajuste.</p>     
+                    
+                 </div> 
+            </div>
+        </div>
+    </div>
+    <!-- end We are -->
+
+    <!-- about  -->
+  
+    <!-- end abouts -->
+
+    <!-- testimonial -->
+    <div id="testimonial" class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Trabajo futuro</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 offset-md-2">
+                    <div class="row box" style="margin-right: 300px;">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/futuro3.PNG" style="width: 508px;" alt="#" /></figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/futuro1.PNG" alt="#" /></figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/futuro2.PNG" alt="#" /></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients_box">
+                        <h3>LIME</h3>
+                        <p>Como parte del proceso de mejora, la integración de una explicación LIME ayudaría a la explicabilidad de las imagenes.
+                            Todo esto apoyado por una mayor cantidad de imagenes haría el proceso mucho mas eficaz.
+                            </p>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 offset-md-2">
+                    
+                        
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="images/stacking.jpg" alt="#" /></figure>
+                            </div>
+                        </div>
+              
+                    <div class="clients_box">
+                        <h3>Ensembles</h3>
+                        <p>Con una mayor capacidad de computo se podría llegar a realizar un ensemble de modelos.
+                            Esta técnica permite tratar a la unión de todos los modelos como uno solo.
+                            </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Contacto</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-box">
+                        <figure><img style="border-radius: 50%; width: 25%;" src="images/Semper.jpeg" alt="#" /></figure>
+                        <br>
+                        <i> Ingeniero informático apasionado por la ciencia de datos.
+                           
+                        </i>
+                            <br><br>
+                            <div class="address" style="text-align: center;">
+                                <div class="wrapper">
+                                    
+                                    <div class="icon facebook">
+                                      <div class="tooltip">Linkedin</div>
+                                      <span><a href="http://www.google.com/"><button class="btnicon"><i class="fa fa-linkedin"></i></button></a></span>                                     
+                                    </div>                                    
+                                    <div class="icon github">
+                                      <div class="tooltip">Github</div>
+                                      <span><a href="https://github.com/DaniSemper"><button class="btnicon"><i class="fa fa-github"></i></button></a></span>
+                                    </div> 
+
+                                    <div class="icon youtube">
+                                        <div class="tooltip">danisempergomez@gmail.com</div>
+                                        <span><a href="mailto:danisempergomez@gmail.com"><button class="btnicon"><i class="fa fa-envelope"></i></button></a></span>
+                                      </div>                                       
+                                  </div>                         
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <!-- end testimonial -->
+
+    
+   
+    <!-- end contact -->
+
+    <!--  footer -->
+    <footr>
+        <div class="footer ">
+            <div class="container">
+                <div class="address" style="text-align: center;">
+                    <ul class="social_link" style="text-align: center;">
+                        
+                    </ul>
+                    <a href="index.html"> <img  style="width: 100px;" src="images/logo.png" alt="logo"></a>
+                </div>
+                <!-- <div class="row">
+                   
+                    <div >
+                        <div class="row">
+                            <div >
+                                
+                            </div>
+                             <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>Quick links</h3>
+                                    <ul class="Menu_footer">
+                                        <li class="active"> <img src="images/3.png" alt="#"> <a href="#game">Game</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#software">Software</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#about">About</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#testimonial"> Testimonial</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#contact">Contact</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>downloded</h3>
+                                    <ul class="Links_footer">
+                                        <li class="active"><img src="images/3.png" alt="#"> <a href="#">Lorem Ipsum </a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#">Simply random</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#">Roots in a</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#"> Piece</a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="#">Classical</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Contact us </h3>
+                                    <ul class="loca">
+                                        <li>
+                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>London 145
+                                            <br>United Kingdom </li>
+                                        <li>
+                                            <a href="#"><img src="icon/email.png" alt="#" /></a>demo@gmail.com </li>
+                                        <li>
+                                            <a href="#"><img src="icon/call.png" alt="#" /></a>+12586954775 </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        <!-- </div>
+                    </div>
+
+                </div> --> 
+
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>© 2021 All Rights Reserved. <a href="https://html.design/">Dani Semper</a></p>
+                </div>
+            </div>
+        </div>
+    </footr>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
